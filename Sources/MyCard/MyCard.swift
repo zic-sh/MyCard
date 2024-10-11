@@ -12,3 +12,19 @@ public struct MyCard : Equatable, Hashable  {
     }
 
 }
+
+
+// MARK: - Comparable
+extension MyCard: Comparable {
+    public static func <(lhs: MyCard, rhs: MyCard) -> Bool {
+        return lhs.rank == rhs.rank ? lhs.suit < rhs.suit : lhs.rank < rhs.rank
+    }
+}
+
+// MARK: - CustomStringConvertible
+extension MyCard: CustomStringConvertible {
+    public var description: String {
+        return "\(suit) \(rank)"
+    }
+}
+
