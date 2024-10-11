@@ -2,7 +2,7 @@
 // https://docs.swift.org/swift-book
 
 
-public struct MyCard {
+public struct MyCard : Equatable, Hashable  {
     let rank: Rank
     let suit: Suit
 
